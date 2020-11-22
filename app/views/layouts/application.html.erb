@@ -17,6 +17,9 @@
     <%= link_to 'タスク一覧', tasks_path %>
     <% if current_user %>
       <%= link_to current_user.name, user_path(current_user) %>
+      <%= link_to 'ログアウトする', session_path(current_user), method: :delete %>
+    <% else %>
+      <%= link_to 'ログインする', session_path %>
     <% end %>
 
     <%= yield %>
