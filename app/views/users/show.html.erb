@@ -1,0 +1,9 @@
+<h1>ユーザ詳細</h1>
+
+<%= @user.name %>
+<%= @user.email %>
+<% @user.tasks.each do |task| %>
+  <div>
+    <%= task.name %>
+  </div>
+<% end %>
